@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import utils.CommonMethods;
 
 public class DashboardPage extends CommonMethods {
+
     @FindBy(id="menu_pim_viewPimModule")
     public WebElement pimButton;
 
@@ -15,7 +16,11 @@ public class DashboardPage extends CommonMethods {
     @FindBy(id="menu_pim_addEmployee")
     public WebElement addEmployeeButton;
 
+    @FindBy(id="welcome")
+    public WebElement welcomeAdminLocator;
+
     public DashboardPage(){
         PageFactory.initElements(driver,this);
     }
+
 }
