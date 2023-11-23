@@ -54,3 +54,10 @@ Feature: add employee scenario
       |donal12      |ms          |duck      |
       |tamoha12     |ms          |jimo      |
       |joe12        |ms          |trump     |
+    @db
+    Scenario: Add Employee from Frontend and verify from DB
+      When user enters "fahim" and "ahmed" and "nour"
+      And user clicks on save button
+      Then employee added successfully
+      And fetch employee info from backend
+      Then verify employee info is properly stored in db
