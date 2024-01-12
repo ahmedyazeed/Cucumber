@@ -34,7 +34,7 @@ public class CommonMethods extends PageInitializer {
                 //silent run
                 FirefoxOptions fo=new FirefoxOptions();
                 fo.setHeadless(false);
-                driver = new FirefoxDriver();
+                driver = new FirefoxDriver(fo);
                 break;
             default:
                 throw new RuntimeException("invalid browser name");
