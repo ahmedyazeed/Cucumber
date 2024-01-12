@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -30,6 +31,9 @@ public class CommonMethods extends PageInitializer {
                 driver = new ChromeDriver(cp);
                 break;
             case "firefox":
+                //silent run
+                FirefoxOptions fo=new FirefoxOptions();
+                fo.setHeadless(false);
                 driver = new FirefoxDriver();
                 break;
             default:
@@ -84,6 +88,7 @@ public class CommonMethods extends PageInitializer {
         byte[] picByte = ts.getScreenshotAs(OutputType.BYTES);
         File sourceFile = ts.getScreenshotAs(OutputType.FILE);
         //we will pass the path of ss from constants class
+
         try {
             FileUtils.copyFile
                     (sourceFile, new File
@@ -102,7 +107,7 @@ public class CommonMethods extends PageInitializer {
         Date date = new Date();
         //after getting the date, I need to format it as per my requirement
         SimpleDateFormat sdf = new SimpleDateFormat(pattern);
-        //it willl return the formatted date as per the pattern in string format
+         //it will return the formatted date as per the pattern in string format
         return sdf.format(date);
     }
 }
