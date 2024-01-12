@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.syntax</groupId>
+    <groupId>org.</groupId>
     <artifactId>CucumberFramework</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -104,7 +104,7 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <projectName>HRMSBATCH17</projectName>
+                            <projectName>CucumberFramework</projectName>
                             <!-- optional, per documentation set this to "true" to bypass generation of Cucumber Reports entirely, defaults to false if not specified -->
                             <skip>false</skip>
                             <!-- output directory for the generated report -->
